@@ -18,8 +18,6 @@ export default function Home() {
     const term = searchInputRef.current.value;
 
     if (!term) return;
-
-    router.push(`/search?term?${term}`);
   };
 
   return (
@@ -72,10 +70,8 @@ export default function Home() {
           />
         </div>
         <div className="flex flex-col w-1/2 space-y-2 justify-center mt-8 sm:space-y-0 sm:flex-row sm:space-x-4">
-          <button onClick={search} className="btn  ">
-            Google Search
-          </button>
-          <button onClick={search} className="btn">
+          <button className="btn h-9 ">Google Search</button>
+          <button className="btn">
             <a href="https://www.google.com/doodles">I'm Feeling Lucky</a>
           </button>
         </div>

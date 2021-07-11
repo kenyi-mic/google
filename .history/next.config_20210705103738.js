@@ -1,6 +1,6 @@
 module.exports = {
   images: {
-    domains: ["www.google.co.uk", "www.google.com"],
+    downloads: ["www.google.com"],
   },
   reactStrictMode: true,
 };

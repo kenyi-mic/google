@@ -8,18 +8,11 @@ import {
 import Image from "next/image";
 import Footer from "../components/Footer";
 import { useRef } from "react";
-import { useRouter } from "next/dist/client/router";
 
 export default function Home() {
-  const router = useRouter();
   const searchInputRef = useRef(null);
   const search = (e) => {
     e.preventDefault();
-    const term = searchInputRef.current.value;
-
-    if (!term) return;
-
-    router.push(`/search?term?${term}`);
   };
 
   return (
@@ -66,16 +59,11 @@ export default function Home() {
             type="text"
             className="outline-none flex-grow"
           />
-          <MicrophoneIcon
-            title="search by voice"
-            className="h-5 cursor-pointer text-blue-700"
-          />
+          <MicrophoneIcon className="h-5 cursor-pointer" />
         </div>
         <div className="flex flex-col w-1/2 space-y-2 justify-center mt-8 sm:space-y-0 sm:flex-row sm:space-x-4">
-          <button onClick={search} className="btn  ">
-            Google Search
-          </button>
-          <button onClick={search} className="btn">
+          <button className="btn ">Google Search</button>
+          <button className="btn">
             <a href="https://www.google.com/doodles">I'm Feeling Lucky</a>
           </button>
         </div>
